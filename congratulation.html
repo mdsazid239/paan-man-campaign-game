@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Congratulations</title>
+  <link rel="stylesheet" href="asset/css/style.css" />
+</head>
+<body>
+  <div
+    class="pm-congrats-page"
+    style="background-image: url('asset/images/paak-man-logo.png');"
+  >
+    <h1 class="pm-title">Congratulations!</h1>
+
+    <div class="pm-burst-container" id="burstContainer">
+      <img
+        src="asset/images/gubara.png"
+        alt="Balloon"
+        class="pm-main-balloon"
+      />
+    </div>
+
+    <button class="pm-btn">
+      Collect Your Reward From
+      <br />
+      Our Representative
+    </button>
+  </div>
+
+  <script>
+    const burstContainer = document.getElementById("burstContainer");
+
+    function createBlast() {
+      for (let i = 0; i < 35; i++) {
+        const piece = document.createElement("span");
+        piece.className = "pm-blast-piece";
+
+        piece.style.setProperty("--x", `${Math.random() * 500 - 250}px`);
+        piece.style.setProperty("--y", `${Math.random() * 500 - 250}px`);
+        piece.style.setProperty("--rotate", `${Math.random() * 720}deg`);
+
+        burstContainer.appendChild(piece);
+
+        setTimeout(() => {
+          piece.remove();
+        }, 1000);
+      }
+    }
+
+    createBlast();
+
+    setInterval(() => {
+      createBlast();
+    }, 3000);
+  </script>
+</body>
+</html>

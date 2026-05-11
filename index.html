@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paak Man</title>
+    <link rel="stylesheet" href="asset/css/style.css" />
+  </head>
+  <body>
+    <section
+      class="pm-home-container"
+      style="background-image: url('asset/images/paak-man-logo.png');"
+      
+    >
+      <div class="pm-overlay"></div>
+
+      <div class="pm-content">
+        <div class="pm-popup-animation" id="popup">
+          <img
+            src="asset/images/paak-man-logo1.png"
+            alt="Paak Man"
+            class="pm-popup-logo"
+          />
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const popup = document.getElementById("popup");
+      popup.style.display = "none";
+
+      setTimeout(() => {
+        popup.style.display = "block";
+      }, 500);
+    </script>
+  </body>
+</html>

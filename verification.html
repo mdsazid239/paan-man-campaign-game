@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verification</title>
+  <link rel="stylesheet" href="asset/css/style.css" />
+</head>
+<body>
+  <div class="pm-verification-page">
+    <img
+      src="asset/images/paak-man-logo.png"
+      alt=""
+      class="pm-verification-bg"
+    />
+
+    <div class="pm-verification-overlay">
+      <img
+        src="asset/images/paak-man-chasma.png"
+        alt="Paak Man"
+        class="pm-verification-logo"
+      />
+
+      <h2>Verification</h2>
+
+      <div class="pm-otp-boxes">
+        <input type="text" maxlength="1" inputmode="numeric" />
+        <input type="text" maxlength="1" inputmode="numeric" />
+        <input type="text" maxlength="1" inputmode="numeric" />
+        <input type="text" maxlength="1" inputmode="numeric" />
+      </div>
+
+      <button class="pm-verify-btn">VERIFY CODE</button>
+    </div>
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll(".pm-otp-boxes input");
+
+    inputs.forEach((input, index) => {
+      input.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "");
+
+        if (this.value && index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      });
+
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Backspace" && !this.value && index > 0) {
+          inputs[index - 1].focus();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
