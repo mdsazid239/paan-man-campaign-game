@@ -1,9 +1,24 @@
 /* index.css */
+@font-face {
+    font-family: 'exo-bold';
+    src: url('../fonts/Exo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'exo-regular';
+    src: url('../fonts/Exo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'exo-Medium.tff';
+    src: url('../fonts/exo-Medium.ttf') format('truetype');
+}
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+   font-family: "Exo";
 }
 
 * {
@@ -62,12 +77,14 @@ body {
 
 /* oops.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+ font-family: "Exo";
 }
 
 * {
@@ -169,13 +186,13 @@ body {
 
 
 /* registration .css */
-
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: "Exo", sans-serif;
+  font-family: "Exo";
 }
 
 html {
@@ -326,14 +343,13 @@ html {
 
 
 /* verification.css  */
-
-
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
-  font-family: "Exo", sans-serif;
+  font-family: "Exo";
 }
 
 * {
@@ -476,12 +492,13 @@ body {
 
 /* win .css */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Exo";
 }
 
 * {
@@ -661,12 +678,14 @@ body {
 }
 
 /* win.css */ 
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
+  font-family: "Exo";
 }
 
 * {
@@ -846,13 +865,14 @@ body {
 }
 
 /* congratulation. css */
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
-html,
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  font-family: "Exo";
 }
 
 * {
