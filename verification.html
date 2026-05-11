@@ -20,27 +20,21 @@
         alt="Paak Man"
         class="pm-verification-logo"
       />
-
       <h2>Verification</h2>
-
       <div class="pm-otp-boxes">
         <input type="text" maxlength="1" inputmode="numeric" />
         <input type="text" maxlength="1" inputmode="numeric" />
         <input type="text" maxlength="1" inputmode="numeric" />
         <input type="text" maxlength="1" inputmode="numeric" />
       </div>
-
       <button class="pm-verify-btn">VERIFY CODE</button>
     </div>
   </div>
-
   <script>
     const inputs = document.querySelectorAll(".pm-otp-boxes input");
-
     inputs.forEach((input, index) => {
       input.addEventListener("input", function () {
         this.value = this.value.replace(/[^0-9]/g, "");
-
         if (this.value && index < inputs.length - 1) {
           inputs[index + 1].focus();
         }
